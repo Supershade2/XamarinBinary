@@ -16,7 +16,7 @@ namespace XamarinBinary
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            string[] message_array;
+            string sms_message;
             //QuickContactBadge test;
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
@@ -29,9 +29,9 @@ namespace XamarinBinary
             phone_number.Click += delegate { button.Text = "Click to Send"; };
             EditText message = FindViewById<EditText>(Resource.Id.editText1);
             message.Click += delegate { button.Text = "Click to Send"; };
-            button.Click += delegate { if (phone_number.Text != "" && message.Text != "" || message.Text.Length < 20) { button.Text = "Sending..."; message_array = ToBinary(message.Text); sms.SendMultipartTextMessage(phone_number.Text, null, message_array, null, null); } else { button.Text = "Enter a valid phone number and message that is not over 20 characters"; } };
+            button.Click += delegate { if (phone_number.Text != "" && message.Text != "" || message.Text.Length < 20) { button.Text = "Sending..."; sms_message = ToBinary(message.Text); sms.SendMultipartTextMessage(phone_number.Text, null,sms.DivideMessage(sms_message), null, null); button.Text = "Press to Send message"; } else { button.Text = "Enter a valid phone number and message that is not over 20 characters"; } };
         }
-        static string[] ToBinary(string message)
+        static string ToBinary(string message)
         {
             char[] message_parts = message.ToCharArray();
             string binary_message = "";
@@ -45,8 +45,8 @@ namespace XamarinBinary
                 int temp = (int)message_parts[index];
                 if (message_parts[index] == ' ')
                 {
-                    binary_message += binary_message.Length == 154 ? "\n":"";
-                    original_spaced += original_spaced.Length == 154 ? "\n" : "";
+                    //binary_message += binary_message.Length == 154 ? "\n":"";
+                    //original_spaced += original_spaced.Length == 154 ? "\n" : "";
                     binary_message += " ";
                     original_spaced += " ";
                 }
@@ -88,13 +88,15 @@ namespace XamarinBinary
                         //temp = temp == 1 && counter == 8 ? 0 : temp;
                     }
                     binary_message += " ";
+                    binary_message += binary_message.Length == 154 ? "\n" : "";
+                    original_spaced += original_spaced.Length == 154 ? "\n" : "";
                 }
 
             }
             binary_message += "\n" + original_spaced;
             //Console.WriteLine(binary_message);
-            string[] true_message = binary_message.Split('\n');
-            return true_message;
+            //string[] true_message = binary_message.Split('\n');
+            return binary_message;
         }
     }
 }
