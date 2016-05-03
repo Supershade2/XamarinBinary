@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinBinary", "XamarinBinary\XamarinBinary.csproj", "{BEE56061-57CC-40CB-A396-434F91ACD777}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "message2Binary", "H:\message2Binary\message2Binary\message2Binary.csproj", "{3E6C9953-1078-4D69-B6CF-6381B6CB454B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEE56061-57CC-40CB-A396-434F91ACD777}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEE56061-57CC-40CB-A396-434F91ACD777}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEE56061-57CC-40CB-A396-434F91ACD777}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BEE56061-57CC-40CB-A396-434F91ACD777}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEE56061-57CC-40CB-A396-434F91ACD777}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEE56061-57CC-40CB-A396-434F91ACD777}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3E6C9953-1078-4D69-B6CF-6381B6CB454B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E6C9953-1078-4D69-B6CF-6381B6CB454B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E6C9953-1078-4D69-B6CF-6381B6CB454B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E6C9953-1078-4D69-B6CF-6381B6CB454B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

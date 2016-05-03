@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="XamarinBinary.XamarinBinary" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
+	<uses-sdk android:targetSdkVersion="19" android:minSdkVersion="19" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.SEND_SMS" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.READ_SMS" />
+	<uses-permission android:name="android.permission.SEND_RESPOND_VIA_MESSAGE" />
+	<application android:label="XamarinBinary" android:icon="@drawable/Icon"></application>
+</manifest>
